@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #3498db, #6dd5fa);
+        display: flex;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .logo {
+        position: absolute;
+        height: 10px;
+        top: 0%;
+        right: 0%;
+      }
+      .parent {
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+        margin-left: 250px;
+      }
+
+      .login-container {
+        align-content: center;
+        position: relative;
+        background: linear-gradient(to left, #3498db, #6dd5fa);
+        border-radius: 8px;
+        box-shadow: 0 0 200px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        text-align: center;
+        width: 300px;
+        margin: 10px;
+        max-width: 100%;
+      }
+
+      .login-container h2 {
+        color: #333;
+      }
+
+      .login-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .input-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .input-group label {
+        font-weight: bold;
+        margin-bottom: 6px;
+      }
+
+      .input-group input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+
+      .input-group button {
+        background: linear-gradient(to right, #3498db, #6dd5fa);
+        color: #fff;
+        width: 70px;
+        border: none;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        max-height: fit-content;
+        cursor: pointer;
+        justify-items: center;
+        text-align: center;
+        transition: background 3s;
+      }
+
+      .input-group button:hover {
+        background: linear-gradient(to right, #6dd5fa, #3498db);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo">
+      <!-- <img
+        width="100"
+        height="100"
+        style="max-width: 100%"
+        src="/Trial/logo.png"
+        alt=""
+      /> -->
+    </div>
+    <div class="parent">
+      <div class="login-container">
+        <h2>Login</h2>
+        <form class="login-form" action="#" method="post">
+          <div class="input-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+            <button onclick="auth()" type="submit">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

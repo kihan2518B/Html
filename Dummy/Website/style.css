@@ -1,0 +1,212 @@
+*{
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  body
+  {
+    min-height: 1000vh;
+    background-color: #fff;
+  }
+  .navigation
+  {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 20px;
+    width: 200px;
+    height: 1980px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-sizing: initial;
+    border-left: 5px rgba(34, 56, 251, 1);
+    background: rgba(34, 56, 251, 1);
+    transition: width 0.5s;
+  }
+  .navigation ul
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    padding-left: 0%;
+    padding-top: 100px;
+  
+  }
+  .navigation ul li
+  {
+    position: relative;
+    list-style: none;
+    width: 200%;
+  }
+  .navigation ul li.active
+  {
+    background: #fff;
+    width: 200px;
+    border-radius: 50px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+  .navigation ul li a
+  {
+    padding-left: 20px;
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+  }
+  .navigation ul li.active a
+  {
+    color: rgba(34, 56, 251, 1);
+  }
+  .navigation ul li a .icon
+  {
+    position: relative;
+    display: block;
+    min-width: 10px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+  }
+  .navigation ul li a .icon ion-icon
+  {
+    font-size: 2em;
+  }
+  .navigation ul li a .title
+  {
+    position: relative;
+    display: block;
+    font-size: large;
+    padding-left: 30px;
+    height: 60px;
+    line-height: 55px;
+    white-space: normal;
+  }
+  
+
+.dashboard ul .v200
+{
+  position: fixed;
+  top: 6px;
+  left: 250px;
+  border: 10px;
+  height: 30pt;
+  width: 50pt;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.progressbar {
+    position: fixed;
+    height: 35%;
+    width: 25%;
+    left: 258px;
+    top: 60px;
+}
+.progressbar1{
+  position: fixed;
+  height: 35%;
+  width: 25%;
+  left: 600px;
+  top: 60px;
+}
+
+.main2{
+  margin-left: 940px;
+  width: 24%;
+  text-align: center;
+  line-height: 33px; 
+   color: black;
+  background-color: aqua;
+  border-radius: 19px;
+  position: fixed;
+  top: 73px;
+
+}
+
+.main1{
+  width: 500px;
+  margin-left: 240px;
+  position: fixed;
+  padding-top: 380px;
+  
+}
+#customers {
+font-family: Arial, Helvetica, sans-serif;
+border-collapse: collapse;
+font-size: 15px;
+
+}
+
+#customers td, #customers th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color:blue;
+color: white;
+}
+
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 320px;
+  margin-left: 800px;
+  position: fixed;
+}
+
+.containerslider{
+  width: 400px;
+  display: flex;
+  align-items: center;
+  border: 6px solid blue;
+  overflow: hidden;
+}
+
+.slider{
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide{
+  flex: 0 0 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide.active{
+  transform: translateX(0);
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+.slider1 button{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+.prev,
+.next{
+  margin: 0 10px;
+  background-color: blue;
+  color: white;
+}

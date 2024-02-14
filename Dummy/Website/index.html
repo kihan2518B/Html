@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <title>Ram Vijay Saw Mill</title>
+  </head>
+  <style>
+    .logout {
+      position: relative;
+      background-color: azure;
+    }
+    .logout:hover {
+      text-underline-offset: initial;
+    }
+    body {
+      background-image: url(background2.jpg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-attachment: fixed;
+    }
+    h1 {
+      color: yellow;
+    }
+    p {
+      color: yellow;
+    }
+    a:visited,
+    a:link {
+      color: aqua;
+      background-color: rgb(197, 197, 197);
+      padding: 0px;
+      font-size: larger;
+    }
+    /* a:hover{
+            background-color: rgb(219, 97, 97);
+            color: rgb(67, 125, 62);
+        } */
+    a:active {
+      color: rgb(255, 255, 255);
+    }
+    p.new {
+      color: blueviolet;
+      background-color: transparent;
+    }
+    p.new:hover {
+      background-color: rgb(22, 247, 67);
+      color: rgb(67, 125, 62);
+    }
+    .logout-button {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: linear-gradient(to right, #3498db, #6dd5fa);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .logout-button:hover {
+      background: linear-gradient(to right, #6dd5fa, #3498db);
+      transform: scale(1.05);
+    }
+  </style>
+  <body>
+    <button onclick="sure()" class="logout-button">Logout</button>
+    <div class="first">
+      <h1 id="top">Ram Vijay Saw Mill</h1>
+      <p
+        style="
+          text-align: center;
+          color: blueviolet;
+          font-size: 50px;
+          font-weight: bold;
+          font-family: Arial;
+        "
+      >
+        Enter Your Paragrph
+      </p>
+      <img
+        style="color: blue"
+        src="https://imgs.search.brave.com/pg5nXxULxa0ub8PCG0P1DzTjUdYfvXYD2Oz4vwywmIQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuZnJlZWltYWdl/cy5jb20vaW1hZ2Vz/L2hvbWUvZmlsZXR5/cGVzL3Bob3RvLndl/YnA"
+        alt=""
+        width="100"
+        height="100"
+      />
+      <h1>Ram Vijay Saw Mill</h1>
+      <address title="mo.9898699923 email...... ">Contact</address>
+      <bdo dir="ltr"> From right to left</bdo>
+
+      <p title="info of paragraph">2nd paragraph without end tag.</p>
+      <p class="new" id="p1">
+        <a href="/Trial/index.html#C4"> XXXXXXXXXXXXXXXXX </a>
+      </p>
+      <hr />
+      <img src="/Trial/logo.png" alt="" />
+      <pre style="font-size: 20px"> 
+                    My Bonnie lies over the ocean.
+                    <br>
+                    My Bonnie lies over the sea.
+                  <br>
+                    My Bonnie lies over the ocean.
+                  <br>
+                    Oh, bring back my Bonnie to me.
+                </pre>
+    </div>
+    <p>The new Headlines</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">
+      WWF works to help local communities conserve the natural resources they
+      depend upon;
+      <q
+        >transform markets and policies toward sustainability; and protect and
+        restore species and their habitats. Our efforts ensure that the value of
+        nature is reflected in decision-making from a local to a global scale.
+      </q>
+      <br />
+    </blockquote>
+    <h1><strong>To make Image map</strong></h1>
+    <img src="/Website/imagemap.jpg" alt="" usemap="#workshop" />
+    <map name="workshop">
+      <area
+        shape="rect"
+        coords="34,43,273,350"
+        href="#"
+        alt="laptop"
+        onclick="myfunction1()"
+      />
+      <area
+        shape="rect"
+        coords="289,172,335,245"
+        href="#"
+        alt="Mobile"
+        onclick="myfunction2()"
+      />
+      <area
+        shape="circle"
+        coords="335,302,47"
+        href="#"
+        alt="coffecup"
+        onclick="myfunction3()"
+      />
+    </map>
+    <script>
+      function myfunction1() {
+        alert("You had clicked on laptop");
+      }
+      function myfunction2() {
+        alert("You had clicked on Mobile");
+      }
+      function myfunction3() {
+        alert("You had clicked on coffecup");
+      }
+      function sure() {
+        alert("You had clicked on Logout");
+        window.location.assign("Loginform.html");
+      }
+    </script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  </body>
+</html>
