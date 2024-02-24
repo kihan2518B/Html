@@ -18,7 +18,10 @@ const signupSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-})
+},
+    {
+        timestamps: true //Automatically adds createdat and updatedat
+    })
 
 // Model
 const User = new mongoose.model("users", signupSchema)  //Two arguements modelName and schema
