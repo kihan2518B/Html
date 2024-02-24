@@ -20,11 +20,12 @@ app.get("/signup", (req, res) => {
 })
 
 app.post("/signup", async (req, res) => {
+    // console.log(req.body)
     const user = {
         email: req.body.email,
-        passwrod: req.body.passwrod
+        password: req.body.password
     }
-    const userData = User.create(user)
+    const userData = await User.create(user)
     console.log(userData);
     res.redirect("login");
 })
