@@ -161,3 +161,26 @@
     font-size: 0.79rem;
     font-weight: 700;
 }
+
+/* Box 6 */
+.nav-returns-orders {
+    width: 134px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-bottom: 10px; */
+    padding: 0 9px 10px;
+}
+
+.nav-returns-first {
+    margin-top: 7px;
+}
+
+.nav-orders-second {
+    width: 112px;
+    display: flex;
+    align-items: center;
+    font-size: 0.79rem;
+    font-weight: 700;
+}
