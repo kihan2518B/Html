@@ -31,7 +31,7 @@ app.post("/signup", async (req, res) => {
 })
 
 app.get("/login", (req, res) => {
-    res.render("login")
+    res.render("login");
 })
 
 const port = 3000;

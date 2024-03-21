@@ -7,7 +7,7 @@
 .navbar {
     width: 100vw;
     height: 60px;
-    background-color: #0f1111;
+    background-color: #131921;
     color: #fff;
     display: flex;
     align-items: center;
@@ -203,4 +203,35 @@
     align-items: center;
     font-size: 1rem;
     font-weight: 700;
+}
+
+/* Second Nav */
+.sec-nav {
+    width: 100vw;
+    height: 40px;
+    background: #232f3e;
+    color: #fff;
+}
+
+.menu-icon {
+    height: 14px;
+    width: 16px;
+}
+
+.sec-nav-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 60px;
+}
+
+.menu {
+    height: fit-content;
+    width: fit-content;
+
+    display: flex;
+    padding: 8px 9px;
+    justify-content: center;
+    align-items: center;
 }

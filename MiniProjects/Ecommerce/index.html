@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-gray-200 text-gray-800">
-    <header class="bg-black w-full h-28 absolute flex items-center">
+<body class="bg-gray-200 ">
+    <header class="fixed bg-black w-full h-28 flex items-center z-10">
         <nav class="flex flex-row">
             <div class="flex items-center mx-3 border-transparent hover:border-white border-2 h-16 w-42">
                 <img class="h-10 w-40 mt-2" src="./Images/MarketSquareLogo.png" alt="Market Square Logo">
@@ -25,6 +28,68 @@
             </div>
         </nav>
     </header>
+
+    <div class="w-[100vw] mx-10 ">
+        <section class="w-[90vw] h-96 absolute top-32">
+            <div class="w-full flex items-center justify-center text-gray-800 ">
+                <p class="underline font-semibold text-2xl hover:shadow-xl">
+                    Best sellers
+                </p>
+            </div>
+            <div id="imageContainer"
+                class="relative flex justify-center gap-1 top-5 h-72 w-full bg-gray-800 overflow-hidden scroll-snap-type x mandatory whitespace-nowrap">
+                <img class="sliderImage w-fit h-full object-contain scroll-snap-align-start"
+                    src="./Images/clothes_Hero1.jpeg" alt="">
+                <img class="sliderImage w-fit h-full object-fill scroll-snap-align-start"
+                    src="./Images/Jewellery_Hero2.jpg" alt="">
+                <img class="sliderImage w-fit h-full object-fill scroll-snap-align-start"
+                    src="./Images/clothes_Hero3.jpeg" alt="">
+                <img class="sliderImage w-fit h-full object-fill scroll-snap-align-start"
+                    src="./Images/clothes_Hero4.jpeg" alt="">
+                <img class="sliderImage h-full w-fit object-fill scroll-snap-align-start"
+                    src="./Images/jewelleryHero5.jpeg" alt="">
+                <img class="sliderImage w-fit h-full object-fill scroll-snap-align-start"
+                    src="./Images/jewelleryHero6.jpeg" alt="">
+
+                <template id="imageTemplate">
+                    <img class="sliderImage w-fit h-full object-fill scroll-snap-align-start" src="" alt="">
+                </template>
+            </div>
+        </section>
+    </div>
+    <script>
+        const container = document.getElementById('imageContainer');
+        const images = document.querySelectorAll('.sliderImage');
+        const imageWidth = images[0].offsetWidth; // Get image width
+        const imageTemplate = document.getElementById('imageTemplate');
+
+        // Clone the original images to create an infinite loop
+        images.forEach(image => {
+            const clone = imageTemplate.content.cloneNode(true);
+            clone.querySelector('img').src = image.src;
+            container.appendChild(clone);
+        });
+
+        // Calculate the total scrollable width including duplicates
+        const totalScrollWidth = imageWidth * images.length * 2;
+
+        // Set the interval (in milliseconds)
+        const scrollInterval = 16; // Adjust as needed for smoother animation
+        const scrollStep = 1; // Scroll step size based on image width
+
+        function scrollImages() {
+            container.scrollLeft += scrollStep;
+            // Check if we have reached the end of the first set of images (including duplicates)
+            if (container.scrollLeft >= imageWidth * 2) {
+                container.scrollLeft = imageWidth; // Snap back to the beginning (duplicate image)
+            } else if (container.scrollLeft + container.offsetWidth >= totalScrollWidth) {
+                container.scrollLeft = totalScrollWidth - container.offsetWidth; // Snap back to the end (duplicate image)
+            }
+        }
+
+        // Scroll the container continuously
+        setInterval(scrollImages, 16);
+    </script>
 </body>
 
 </html>
