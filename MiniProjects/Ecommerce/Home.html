@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-200 font-serif">
+    <header class="fixed bg-black w-full h-28 flex items-center z-10">
+        <nav class="flex flex-row">
+            <div class="flex items-center mx-3 border-transparent hover:border-white border-2 h-16 w-42">
+                <img class="h-10 w-40 mt-2" src="./Images/MarketSquareLogo.png" alt="Market Square Logo">
+            </div>
+
+            <div class="flex ml-40 gap-20 items-center justify-center">
+                <a href="#"
+                    class="text-teal-500 hover:text-gray-200 font-medium px-3 py-2 border-transparent hover:border-gray-100 border-2 rounded-md">Home</a>
+                <a href="#"
+                    class="text-teal-500 hover:text-gray-200 font-medium px-3 py-2 border-transparent hover:border-gray-100 border-2 rounded-md">Clothes</a>
+                <a href="#"
+                    class="text-teal-500 hover:text-gray-200 font-medium px-3 py-2 border-transparent hover:border-gray-100 border-2 rounded-md">Jewelry</a>
+                <div class="flex relative left-32 ">
+
+                    <i class="mt-2 text-white fa-solid fa-regular fa-cart-shopping fa-2xl"></i>
+                    <p class="font-medium text-lg text-teal-500">Cart</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="w-[90vw] mx-10 flex-col gap-20">
+        <section class="w-[90vw] h-[90vh] flex flex-col gap-2 relative top-32">
+            <div class="w-full flex items-center justify-center text-purple-800 ">
+                <p class="underline font-semibold text-2xl hover:shadow-xl">
+                    Best sellers
+                </p>
+            </div>
+            <div id="imageContainer"
+                class="relative flex gap-1 p-1 justify-center h-72 w-full bg-gradient-to-br from-purple-800 to-blue-500 to-purple-500 overflow-hidden whitespace-nowrap">
+                <!-- <div id="imageContainer" class="slider flex gap-1"> -->
+                <img class="sliderImage w-[55vw] h-full border-purple-500 border-2 rounded-md object-cover scroll-snap-align-start"
+                    src="./Images/clothes_Hero1.jpeg" alt="">
+                <img class="sliderImage w-[55vw] h-full border-purple-500 border-2 rounded-md object-cover scroll-snap-align-start"
+                    src="./Images/Jewellery_Hero2.jpg" alt="">
+                <img class="sliderImage w-[55vw] h-full border-purple-500 border-2 rounded-md object-cover scroll-snap-align-start"
+                    src="./Images/clothes_Hero3.jpeg" alt="">
+                <img class="sliderImage w-[55vw] h-full border-purple-500 border-2 rounded-md object-cover roll-snap-align-start"
+                    src="./Images/clothes_Hero4.jpeg" alt="">
+                <img class="sliderImage w-[55vw] h-full border-purple-500 border-2 rounded-md object-cover scroll-snap-align-start"
+                    src="./Images/jewelleryHero5.jpeg" alt="">
+                <img class="sliderImage w-[55vw] h-full border-purple-500 border-2 rounded-md object-cover scroll-snap-align-start"
+                    src="./Images/jewelleryHero6.jpeg" alt="">
+
+                <template id="imageTemplate">
+                    <img class="sliderImage w-[55vw] h-full border-purple-500 border-2 rounded-md object-cover scroll-snap-align-start"
+                        src="" alt="">
+                </template>
+            </div>
+        </section>
+
+        <!-- Catagories -->
+        <section class="flex-col relative top-5">
+            <div
+                class="flex justify-center items-center shadow-md rounded shadow-purple-700 bg-gradient-to-br from-purple-500 to-pink-500">
+                <div class="h-fit w-fit p-1 relative text-purple-800">
+                    <h3 class="underline font-semibold font-serif text-2xl animate-pulse text-purple-900">
+                        Top Deals
+                    </h3>
+                </div>
+            </div>
+            <section>
+                <div class="h-30 flex justify-center relative top-5">
+                    <div class="rotate-12 rounded-md bg-gradient-to-br from-purple-800 to-blue-500 to-purple-500">
+                        <div class=" p-2 bg-gray-200 rounded-md -rotate-12">
+                            <h1 class="font-bold text-lg text-purple-700">
+                                Clothes</h1>
+                        </div>
+                    </div>
+                </div>
+                <hr class="relative border-t border-purple-500 top-10" />
+
+                <div class="relative top-12 flex flex-wrap gap-10 justify-center">
+
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBBnoeC-BvQGwKERmGocfXOB-Ds5_0Tr1nTw&usqp=CAU"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>50% OFF</span>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-3 text-xs ml-3 h-8 overflow-hidden flex justify-start font-bold text-sm text-purple-900">
+                            <p>Gustomerd New Spring Plaid Shirt Men Solid Color Shirt...</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://rukminim2.flixcart.com/image/832/832/xif0q/t-shirt/7/q/w/s-all-rbc-white-one-nb-nicky-boy-original-imagjz5bgpmhcaea.jpeg?q=70&crop=false"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-3 text-xs ml-3 h-8 overflow-hidden flex justify-start font-bold text-sm text-purple-900">
+                            <p>Men Typography Round Neck Cotton Blend Light Blue...</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://imagescdn.peterengland.com/img/app/product/9/930389-11795918.jpg?q=75&auto=format&w=342"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-3 text-xs ml-3 h-8 overflow-hidden flex justify-start font-bold text-sm text-purple-900">
+                            <p>MEN GREEN SLIM FIT STRIPE FULL SLEEVES CASUAL...</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://deepikanagpal.com/cdn/shop/products/DN25-Nov0861_720x.jpg?v=1608836715"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>Walnut frill sleeve shirt with embroidered shoulders...</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://static3.azafashions.com/tr:w-450/uploads/product_gallery/1695898175410_1.jpg"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>Green Georgette Embellished Cutdana Round Checkered...</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://www.alamodelabel.in/cdn/shop/products/D25A43CB-81AC-4F37-A1FC-2320E648FB12_800x.jpg?v=1622816130"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>BURKLEY 3 PIECE SET</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://www.torani.in/cdn/shop/files/221_f7885f59-936a-4bd9-a826-b63c8b223b56_800x.jpg?v=1688456602"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>SINDOORI MAKHMAL YUVANI SAREE SET</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://asset1.cxnmarksandspencer.com/is/image/mands/SD_04_T88_1615U_HP_X_EC_0?$PDP_INT_IMAGE_DESKTOP_DOUBLE$"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>Regular Denim Cargo Jeans (2-8 Yrs)</p>
+                        </div>
+                    </div>
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://static3.azafashions.com/tr:w-450/uploads/product_gallery/120_1310-0432746001634131211.jpg"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>LITTLE BOYS CLOSET BY GUNJAN KHANIJOU</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="relative top-20">
+                <div class="h-30 flex justify-center relative top-5">
+                    <div class="rotate-12 rounded-md bg-gradient-to-br from-purple-800 to-blue-500 to-purple-500">
+                        <div class=" p-2 bg-gray-200 rounded-md -rotate-12">
+                            <h1 class="font-bold text-lg text-purple-700">
+                                Jwelery</h1>
+                        </div>
+                    </div>
+                </div>
+                <hr class="relative border-t border-purple-500 top-10" />
+
+                <div class="relative top-12 flex flex-wrap gap-10 justify-center">
+
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="data:image/jpeg;base64,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"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div
+                            class="mt-3 text-xs ml-3 h-8 overflow-hidden flex justify-start font-bold text-sm text-purple-900">
+                            <p>Buy Bridal Wedding Jewellery Set,bridal Accessories,...</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8OFgb7gCSns-eYRncV0leOVh_b1YFjE1IynNgt7msaIHPCfrUnZ3CTeXp7hqaSEp4-MQ&usqp=CAU"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>18K Gold Rose Gold 925 Sterling Silver Jewelry...</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://menofplatinum.com/wp-content/uploads/2023/08/Discover-collection-Kada2-800x800-3.jpg"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>Platinum Jewellery for Men - Platinum Rings...</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://images.meesho.com/images/products/230846648/ll7vn_512.webp" alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>24inches 1 Gram Gold Jewellery Chains For Men...</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://salty.co.in/cdn/shop/files/Y2K-Punk-Star-Pendant-Black-Crystal-Necklace-for-Women-Double-Chain-Beads-Necklace-Choker-Stainless-Steel.jpg_Q90.jpg__1.webp?v=1683296508&width=1080"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>Fashionable Mens Jewellery | Artificial Jewellery for Men...</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://newcdn.kalkifashion.com/media/catalog/product/g/o/gold_finish_danglers_with_green_meenakari_and_carved_detail-sg196991_3_.jpg?aio-w=500"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>Gold Finish Danglers With Green Meenakari And Carved...</p>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative h-64 w-52 rounded-[20px] bg-gradient-to-br from-purple-800 via-indigo-500 to-purple-400 shadow-2xl shadow-purple-600 overflow-hidden">
+                        <div class="flex justify-center">
+                            <img class="h-44 w-full p-3 object-fill rounded-t-[20px] rounded-b-md"
+                                src="https://newcdn.kalkifashion.com/media/catalog/product/p/i/pink_jute_choker_with_kundan_motifs-sg183745_4_.jpg?aio-w=500"
+                                alt="">
+                        </div>
+                        <div class="flex justify-start ml-3">
+
+                            <div class="flex items-center w-20 justify-evenly bg-pink-500  rounded">
+                                <span>68% OFF</span>
+                            </div>
+                        </div>
+                        <div class="mt-3 ml-3 h-8 overflow-hidden flex justify-start font-bold text-xs text-purple-900">
+                            <p>Pink Jute Choker With Kundan Motifs</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </div>
+
+    <script>
+        const container = document.getElementById('imageContainer');
+        const images = document.querySelectorAll('.sliderImage');
+        const imageWidth = images[0].offsetWidth; // Get image width
+        const imageTemplate = document.getElementById('imageTemplate');
+
+        // Clone the original images to create an infinite loop
+        images.forEach(image => {
+            const clone = imageTemplate.content.cloneNode(true);
+            clone.querySelector('img').src = image.src;
+            container.appendChild(clone);
+        });
+
+        // Calculate the total scrollable width including duplicates
+        const totalScrollWidth = imageWidth * images.length * 2;
+
+        // Set the interval (in milliseconds)
+        const scrollInterval = 16; // Adjust as needed for smoother animation
+        const scrollStep = 1; // Scroll step size based on image width
+
+        function scrollImages() {
+            container.scrollLeft += scrollStep;
+            // Check if we have reached the end of the first set of images (including duplicates)
+            if (container.scrollLeft >= imageWidth * 2) {
+                container.scrollLeft = imageWidth; // Snap back to the beginning (duplicate image)
+            } else if (container.scrollLeft + container.offsetWidth >= totalScrollWidth) {
+                container.scrollLeft = totalScrollWidth - container.offsetWidth; // Snap back to the end (duplicate image)
+            }
+        }
+
+        // Scroll the container continuously
+        setInterval(scrollImages, scrollInterval);
+    </script>
+</body>
+
+</html>
