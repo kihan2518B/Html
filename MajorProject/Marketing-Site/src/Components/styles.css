@@ -1,0 +1,51 @@
+.card {
+    transform: translate(none);
+}
+
+.card:hover>.contain>.description {
+    transform: translateX(0);
+    opacity: 100;
+    transition: all ease 300ms;
+}
+
+.card>.contain>.description {
+    /* Default state for the element */
+    transform: translateX(-100%);
+    /* Initially hidden off-screen (adjust as needed) */
+    opacity: 0;
+    /* Initially invisible */
+    transition: all ease 300ms;
+    /* Smooth transition for both hover and mouseout */
+}
+
+.background {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background-color: rgb(59, 209, 59);
+    position: absolute;
+    z-index: -1;
+    width: 0;
+    height: 100%;
+}
+
+.card:hover>.contain {
+    color: black;
+    background-color: transparent;
+}
+
+.card:hover>.background {
+    opacity: 100%;
+    width: 30vw;
+    transition: all ease-in-out 150ms;
+}
+
+.solutions {
+    overflow: auto;
+
+    /* Hide scrollbar for all browsers (may not work perfectly everywhere) */
+    &::-webkit-scrollbar {
+        /* WebKit (Chrome, Safari) */
+        display: none;
+    }
+}
