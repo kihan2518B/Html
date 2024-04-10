@@ -49,3 +49,19 @@
         display: none;
     }
 }
+
+.trending-img {
+    transform: translateY(100%);
+    transition: all ease-in-out 150ms;
+}
+
+.trending-content:hover>#Right>.trending-img {
+    transform: translateY(0);
+    scale: 250%;
+    transition: all ease-in-out 150ms;
+}
+
+.trending-content:hover>#Right {
+    overflow: visible;
+    transition: all ease-in-out 3s;
+}
