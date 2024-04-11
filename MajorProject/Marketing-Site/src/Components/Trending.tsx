@@ -1,10 +1,9 @@
 import React from 'react';
 import './styles.css';
-import trending1 from "../assets/trending-1.png"
 
 const Trending = () => {
     return (
-        <div className='mx-5 mt-3 w-[95vw]'>
+        <div className='z-50 bg-white rounded-b-2xl px-5 pt-3 w-[100vw]'>
             <div id='Title' className="flex h-20 w-full">
                 <h1 className='text-4xl font-bold'>Trending</h1>
             </div>
@@ -20,7 +19,7 @@ const Trending = () => {
                     <hr className='border-t border-black' />
                 </div>
                 <div id='Right' className="right-0 h-20 overflow-hidden w-[40vw] flex justify-center items-center absolute">
-                    <img className='trending-img h-full object-cover ' src={trending1} alt="" />
+                    <img className='trending-img h-full object-cover ' src="https://github.com/kihan2518B/Html/blob/main/MajorProject/Marketing-Site/src/assets/trending-1.png?raw=true" alt="" />
                 </div>
             </div>
 

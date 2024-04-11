@@ -26,7 +26,7 @@ const Card = ({ heading, description }) => {
 
 const Cards = () => {
     return (
-        <div className='solutions flex mt-10 h-[100vh] w-[90vw] items-center mx-auto gap-5 justify-center'>
+        <div className='solutions bg-white flex mt-10 h-[100vh] w-[90vw] items-center mx-auto gap-5 justify-center'>
 
 
             <Card heading="Tech Solutions" description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa natus corrupti molestias maxime placeat esse nulla aperiam consequuntur cum quibusdam iusto, mollitia saepe voluptatum suscipit libero. Nobis, fugit non!    

@@ -24,7 +24,6 @@
     opacity: 0;
     background-color: rgb(59, 209, 59);
     position: absolute;
-    z-index: -1;
     width: 0;
     height: 100%;
 }

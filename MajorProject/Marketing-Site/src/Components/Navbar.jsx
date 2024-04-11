@@ -1,9 +1,10 @@
-import { useState, } from 'react';
-import "./styles.css"
+import { useState, useLayoutEffect } from 'react';
+import "./styles.css";
+import gsap from "gsap";
 
 const SolutionOptions = () => {
     return (
-        <div className='SolutionOptions z-50 absolute top-20 bg-gray-500 w-full h-52 left-0 text-secondary'>Solutions</div>
+        <div className='SolutionOptions z-10 absolute top-20 bg-gray-500 w-full h-52 left-0 text-secondary'>Solutions</div>
     )
 };
 const AboutOptions = () => {
@@ -92,9 +93,26 @@ const Navbar = () => {
         // solutionOptionsElement.classList.remove('active');
     };
 
+    useLayoutEffect(() => {
+        gsap.from("#nav", {
+            delay: 0.4,
+            opacity: 0,
+            duration: 1,
+            y: -50
+        })
+
+        gsap.to("#nav", {
+            delay: 0.4,
+            opacity: 1,
+            duration: 1,
+            y: 0
+        })
+
+    }, [])
+
     return (
         <section className=" bg-black w-full text-white h-24">
-            <div className="px-4 w-full flex h-full items-center">
+            <div id='nav' className="px-4 w-full flex h-full items-center">
 
                 <div className=" logo w-1/3 h-fit text-2xl ">
                     <h1 className="">Logo</h1>
