@@ -64,3 +64,20 @@
     overflow: visible;
     transition: all ease-in-out 3s;
 }
+
+.Options {
+    opacity: 0;
+    transform: translateY(-20px);
+    z-index: 10;
+    position: absolute;
+    top: 9.2rem;
+    left: 0;
+    transition: all ease-in-out 300ms;
+}
+
+.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all ease-in-out 300ms;
+
+}

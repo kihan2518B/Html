@@ -3,7 +3,7 @@ import './styles.css';
 
 const Trending = () => {
     return (
-        <div className='z-50 bg-white rounded-b-2xl px-5 pt-3 w-[100vw]'>
+        <div className='z-0 relative bg-white rounded-b-2xl px-5 pt-3 w-[100vw]'>
             <div id='Title' className="flex h-20 w-full">
                 <h1 className='text-4xl font-bold'>Trending</h1>
             </div>
