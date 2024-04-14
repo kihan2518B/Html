@@ -123,11 +123,11 @@ const Navbar = () => {
 
     return (
         <div className="">
-            <section className=" h-fit text-white ">
-                <div id='nav' className="bg-black px-4 w-full flex h-24 items-center">
+            <section className=" h-fit bg-black text-white ">
+                <div id='nav' className=" px-4 w-full flex h-24 items-center">
 
-                    <div className=" logo w-1/3 h-fit text-2xl ">
-                        <img src="" alt="" />
+                    <div className=" logo w-1/3 h-fit text-2xl items-center flex">
+                        <img className='h-[30vh]' src="https://github.com/kihan2518B/Html/blob/main/MajorProject/Marketing-Site/src/assets/Your%20paragraph%20text.png?raw=true" alt="" />
                     </div>
                     <div id="links" className="gap-10 flex w-1/3 ">
                         <div className='cursor-pointer'>Work</div>
