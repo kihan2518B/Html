@@ -89,11 +89,15 @@ const Navbar = () => {
         // console.log(solutionOptions)
 
         solutionBtn.addEventListener('mouseenter', () => {
+            console.log("Added")
             solutionOptions.classList.add('active');
+            // solutionOptions.classList.remove('hidden');
         });
 
         solutionOptions.addEventListener('mouseleave', () => {
+            console.log("removed")
             solutionOptions.classList.remove('active');
+            // solutionOptions.classList.add('hidden');
         });
 
         AboutBtn.addEventListener('mouseenter', () => {
@@ -123,7 +127,7 @@ const Navbar = () => {
                 <div id='nav' className="bg-black px-4 w-full flex h-24 items-center">
 
                     <div className=" logo w-1/3 h-fit text-2xl ">
-                        <h1 className="">Logo</h1>
+                        <img src="" alt="" />
                     </div>
                     <div id="links" className="gap-10 flex w-1/3 ">
                         <div className='cursor-pointer'>Work</div>
@@ -174,7 +178,7 @@ const Navbar = () => {
                 </div>
 
                 {/* About */}
-                <div id='AboutOptions' className='Options w-full h-52 flex justify-center items-center text-secondary'>
+                <div id='AboutOptions' className='Options w-full h-52 hidden justify-center items-center text-secondary'>
                     <div className="bg-gray-200 rounded-b-2xl flex justify-center items-center rounded-2xl h-[60vh] w-[98vw] text-secondary">
                         <div className="w-1/3 h-full rounded-bl-2x text-black flex-col justify-center align-center">
                             <p className=" cursor-pointer justify-center flex items-center font-thin text-4xl text-left w-full h-1/5">How we Work</p>
@@ -202,7 +206,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Resources */}
-                <div id='ResourceOptions' className='Options w-full h-52 flex justify-center items-center text-secondary'>
+                <div id='ResourceOptions' className='Options w-full h-52 hidden justify-center items-center text-secondary'>
                     <div className="bg-gray-200 rounded-b-2xl flex justify-center items-center rounded-2xl h-[60vh] w-[98vw] text-secondary">
                         <div className="w-1/3 h-full rounded-bl-2x text-black flex-col justify-center align-center">
                             <p className=" justify-center flex items-center font-thin text-4xl text-left w-full h-1/5">Blog</p>
