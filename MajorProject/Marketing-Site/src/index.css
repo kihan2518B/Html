@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrolling-container {
+  overflow: hidden; /* Prevent overflow */
+  width: fit-content; /* Adjust width if needed */
+  white-space: nowrap; /* Prevent text wrapping */
+  animation: scrollText 10s linear infinite; /* Animation definition */
+}
+
+.hidden-text {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Move off-screen initially */
+}
+
+@keyframes scrollText {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-200%); } /* Adjust for text width + some extra space */
+}
