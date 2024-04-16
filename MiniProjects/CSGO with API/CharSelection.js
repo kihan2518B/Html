@@ -35,6 +35,22 @@ div2.style.marginLeft = "150px";
 div2.style.overflow = "scroll";
 
 
+p1.innerHTML = "Choose your name";
+div3.style.display = "flex";
+div3.style.justifyContent = "start";
+div3.style.alignItems = "center";
+inputName.required = true;
+function getInputValue() {
+    const InputValue = inputName.value;
+    console.log(InputValue)
+    return InputValue
+}
+div3.appendChild(p1)
+div3.appendChild(inputName)
+
+button.style.backgroundColor = "rgb(216, 217, 206)";
+button.style.padding = "15px 100px";
+
 const agents = fetch("https://bymykel.github.io/CSGO-API/api/en/agents.json")
     .then(async (data) => {
         const res = await data.json()
@@ -42,7 +58,7 @@ const agents = fetch("https://bymykel.github.io/CSGO-API/api/en/agents.json")
 
         for (let agent of res) {
             if (agent.team.name === teamSelected) {
-                console.log(agent.team.name)
+                const AgentID = agent.id;
 
                 const imageDetails = document.createElement("p");
                 const imageElement = document.createElement("img");
@@ -64,7 +80,17 @@ const agents = fetch("https://bymykel.github.io/CSGO-API/api/en/agents.json")
                 imageDetails.innerHTML = AgentName;
 
                 imagediv.addEventListener("click", function () {
-                    window.location.href = "CharSelection.html"
+                    const InputValue = getInputValue()
+                    if (!InputValue) {
+                        alert("Your Name Is compulsory")
+                    } else if (InputValue.length > 20) {
+                        alert("Your Name Must not be greater than 20 letters")
+                    } else if (InputValue.split(" ").length > 2) {
+                        alert("Your Name must be of 2 words not more")
+                    } else {
+                        console.log(InputValue.split(" ").length)
+                        window.location.href = `WeaponSelection.html?selected=${teamSelected}&YourName=${InputValue}&AgentID=${AgentID}`
+                    }
                 })
 
                 imagediv.appendChild(imageElement)
@@ -74,17 +100,6 @@ const agents = fetch("https://bymykel.github.io/CSGO-API/api/en/agents.json")
         }
         // return res
     })
-
-p1.innerHTML = "Choose your name";
-div3.style.display = "flex";
-div3.style.justifyContent = "start";
-div3.style.alignItems = "center";
-
-div3.appendChild(p1)
-div3.appendChild(inputName)
-
-button.style.backgroundColor = "rgb(216, 217, 206)";
-button.style.padding = "15px 100px";
 
 document.body.style.backgroundColor = "pink"
 
